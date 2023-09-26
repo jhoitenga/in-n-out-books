@@ -1,0 +1,54 @@
+<!--
+ * Title: contact.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 6, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
+-->
+
+<!-- Container with flex layout-->
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="mat-elevation-z0">
+      <!-- Card title with an icon -->
+      <mat-card-title class="card-title-icon">
+        <mat-icon color="primary">navigation</mat-icon>
+      </mat-card-title>
+      <br />
+      <!-- Card content with address information -->
+      <mat-card-content class="align-center">
+        <p>123 Main Street</p>
+        <p>Parkville, MO 64152</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex>
+    <!-- Card content with contact information -->
+    <mat-card class="mat-elevation-z0">
+      <mat-card-title class="card-title-icon">
+        <mat-icon color="primary">phone</mat-icon>
+      </mat-card-title>
+      <br />
+      <mat-card-content class="align-center">
+        <p>Direct: 816-867-5309</p>
+        <p>Toll-Free: 1-888-867-5309</p>
+        <p>Fax: 816-555-4800</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Line breaks for spacing -->
+<br />
+<br />
+<br />
+<br />
+
+<!-- Text with centered alignment -->
+<div fxLayout="column">
+  <p style="text-align: center">
+    Visit us online or at one of our great locations throughout the Parkville
+    area.
+  </p>
+</div>

@@ -1,0 +1,49 @@
+<!--
+ * Title: app.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 6, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
+ * Angular Tutorial for Beginners: Output Properties video by Professor Krasso (https://www.youtube.com/watch?v=SxAsehrObQo)
+-->
+
+<!-- Define a Material Toolbar with a CSS class -->
+<mat-toolbar class="mat-toolbar">
+  <mat-toolbar-row>
+    <!-- Create a logo section -->
+    <div class="logo">
+      <!--Displaying logo from https://github.com/buwebdev/web-425 -->
+      <img src="./assets/In-N-OutBooksLogo.png" height="80" />
+    </div>
+
+    <!-- Create a navigation section with buttons -->
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button routerLink="/book-list">Book List</button>
+        <button mat-button routerLink="/wishlist">Wishlist</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<!-- Create a responsive layout with Angular Flex Layout -->
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <mat-card-title class="blue">
+        {{ assignment }}
+      </mat-card-title>
+      <br />
+      <br />
+
+      <!-- Display routed components within a router-outlet -->
+      <mat-card-content>
+        <router-outlet> </router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

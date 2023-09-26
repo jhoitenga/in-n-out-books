@@ -1,0 +1,68 @@
+<!--
+ * Title: about.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 6, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
+-->
+
+<!-- Create a responsive layout with Angular Flex Layout -->
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <!-- Create a column layout with two sections -->
+    <div fxLayout="column">
+      <!-- Display an image of Shirley Jackson -->
+      <div>
+        <img src="./assets/Jackson_shirley.jpg" />
+      </div>
+      <!-- Provide image attribution information -->
+      <div>
+        <em>
+          Photo by
+          <a
+            class="attribution-link"
+            href="https://commons.wikimedia.org/wiki/File:Jackson_shirley.jpg"
+            target="_blank"
+            >Armen</a
+          >,
+          <a
+            class="attribution-link"
+            href="https://creativecommons.org/licenses/by-sa/4.0"
+            target="_blank"
+            >CC BY-SA 4.0</a
+          >
+        </em>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <!-- Display the title "Who was Shirley Jackson?" with blue color -->
+    <h1 class="blue">Who was Shirley Jackson?</h1>
+    <!-- Provide a biography paragraph about Shirley Jackson -->
+    <p>
+      Shirley Jackson (1916-1965) was an American author renowned for her
+      pioneering contributions to the horror and psychological thriller genres.
+      Born in San Francisco, her works often explored the darker aspects of
+      human nature and society. Jackson gained widespread recognition with her
+      chilling short story "The Lottery," published in 1948, which sparked
+      controversy and critical acclaim for its exploration of conformity and mob
+      mentality. Her novels, including "The Haunting of Hill House" (1959) and
+      "We Have Always Lived in the Castle" (1962), showcased her mastery of
+      creating eerie atmospheric tension and complex characters. Jackson's
+      distinctive storytelling has left an indelible mark on the world of
+      literature, influencing countless writers in the realms of horror and
+      suspense.
+    </p>
+    <!-- Provide attribution for the biography source -->
+    <em>
+      Biography by:
+      <a
+        class="attribution-link"
+        href="http://shirleyjackson.org/"
+        target="_blank"
+        >ShirleyJackson.org</a
+      >
+    </em>
+  </div>
+</div>

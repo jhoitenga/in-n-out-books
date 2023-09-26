@@ -1,0 +1,50 @@
+/**
+ * Title: styles.scss
+ * Author: Jennifer Hoitenga
+ * Date: September 6, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Custom Angular Material Themes video by Professor Krasso (https://www.youtube.com/watch?v=J2RHvuYFna4)
+ */
+
+/* Import the theme stylesheet. */
+@import "./theme";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.blue {
+  color: #2196f3;
+}
+
+.green {
+  color: #66bb6a;
+}
+
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+.card-title-icon {
+  text-align: center;
+}
+
+.card-title-icon,
+.mat-icon {
+  font-size: 72px;
+}
+
+.align-center {
+  text-align: center;
+}

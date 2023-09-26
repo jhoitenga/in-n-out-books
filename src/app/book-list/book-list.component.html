@@ -1,0 +1,47 @@
+<!--
+ * Title: book-list.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 6, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
+ * Angular Tutorial for Beginners: Data Tables with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=VvHoy5CtFIE)
+ * Assignment 8.2 Instructions by Professor Krasso
+-->
+
+<!-- Display a spinner while books are being loaded -->
+<ng-container *ngIf="books.length === 0">
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-container>
+
+<!-- Display the list of books once loaded -->
+<div *ngIf="books.length > 0">
+  <!-- Display the heading with the number of favorite books -->
+  <h2 class="green">Top {{ books.length }} Favorite Books</h2>
+
+  <!-- Create a grid for displaying individual book cards -->
+  <div class="grid-container">
+    <!-- Iterate through the 'books' array to display each book -->
+    <ng-container *ngFor="let book of books">
+      <!-- Display an individual book card -->
+      <mat-card class="grid-container__item mat-elevation-z8">
+        <mat-card-title>
+          <!-- Create a clickable link to show book details when clicked -->
+          <a
+            class="grid-container__ahref blue"
+            (click)="showBookDetails(book.isbn)"
+            >{{ book.title }}</a
+          >
+        </mat-card-title>
+        <br />
+        <mat-card-content>
+          <mat-list>
+            <!-- Display book details such as ISBN, number of pages, and authors -->
+            <mat-list-item>ISBN: {{ book.isbn }}</mat-list-item>
+            <mat-list-item>Pages: {{ book.numOfPages }}</mat-list-item>
+            <mat-list-item>Authors: {{ book.authors.join(",") }}</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>

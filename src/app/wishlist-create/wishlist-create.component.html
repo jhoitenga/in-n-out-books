@@ -1,0 +1,24 @@
+<!--
+ * Title: wishlist-create.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 13, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Output Properties video by Professor Krasso (https://www.youtube.com/watch?v=SxAsehrObQo)
+-->
+
+<form fxLayout="column" class="wishlist-create-form">
+  <!-- Wishlist Item Title Input -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Title</mat-label>
+    <!-- Input field for entering the title of the wishlist item -->
+    <input type="text" name="title" matInput [(ngModel)]="item.title" />
+  </mat-form-field>
+  <!-- Wishlist Item Authors Input -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Authors</mat-label>
+    <!-- Input field for entering the authors of the wishlist item -->
+    <input type="text" name="authors" matInput [(ngModel)]="item.authors" />
+  </mat-form-field>
+  <!-- Button to Add Wishlist Item -->
+  <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>

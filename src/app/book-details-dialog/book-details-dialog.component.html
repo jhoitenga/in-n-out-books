@@ -1,0 +1,36 @@
+<!--
+ * Title: book-details-dialog.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 6, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
+ * Angular Tutorial for Beginners: Data Tables with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=VvHoy5CtFIE)
+ * Assignment 5.4 Dialog Instructions by Professor Krasso
+-->
+
+<mat-card>
+  <!-- Display the book title with a blue color -->
+  <mat-card-title class="blue">
+    {{ book.title }}
+    <br />
+    <br />
+  </mat-card-title>
+
+  <!-- Create a container for book details -->
+  <mat-card-content>
+    <div fxLayout="column">
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Description:<br />{{ book.description }}</p>
+      <p>Pages: {{ book.numOfPages }}</p>
+      <p>Authors: {{ book.authors.join(",") }}</p>
+    </div>
+  </mat-card-content>
+
+  <!-- Create a row for card actions and align them to the end (right) -->
+  <mat-card-actions fxLayout="row" fxLayoutAlign="end">
+    <!-- Define a button that closes the dialog with a confirmation result -->
+    <button mat-raised-button color="accent" matDialogClose="confirm">
+      OK
+    </button>
+  </mat-card-actions>
+</mat-card>
